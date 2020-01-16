@@ -1,10 +1,13 @@
 using System;
 
-namespace Domain.Entities
+namespace Shared.Entities
 {
     public abstract class Entity
     {
-        public string Id { get; set; }
+        public Entity(){
+            Id = Guid.NewGuid();
+        }
+        public Guid Id { get; set; }
         public DateTime? DeletedAt { get; set; }
         public DateTime? ModifiedAt { get; set; }
         private DateTime? createdAt;
