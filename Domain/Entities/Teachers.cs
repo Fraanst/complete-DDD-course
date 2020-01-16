@@ -2,7 +2,7 @@ using Domain.ValueObjects;
 
 namespace Domain.Entities
 {
-    public class Teachers
+    public class Teachers : Entity
     {
         public Teachers(Name name, Email email, Address address, Document document)
         {
