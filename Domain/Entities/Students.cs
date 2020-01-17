@@ -30,6 +30,6 @@ namespace Domain.Entities
         }
         public string School { get; set; }
         public string ClassYear { get; set; }
-        public IReadOnlyCollection<Discipline> discipline { get; private set; }
+        public IReadOnlyCollection<Discipline> Discipline { get; private set; }
     }
 }
