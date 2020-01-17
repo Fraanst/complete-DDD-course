@@ -1,10 +1,11 @@
 using Domain.ValueObjects;
+using Shared.Entities;
 
 namespace Domain.Entities
 {
-    public class discipline : Entity
+    public class Discipline : Entity
     {
-        public discipline(Name name)
+        public Discipline(Name name)
         {
             Name = name;
         }

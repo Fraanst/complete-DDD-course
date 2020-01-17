@@ -1,6 +1,8 @@
+using Shared.ValueObjects;
+
 namespace Domain.ValueObjects
 {
-    public class Address
+    public class Address : ValueObject
     {
         public Address(string street, string number, string neighborhood, string city, string state, string country)
         {

@@ -1,6 +1,8 @@
+using Shared.ValueObjects;
+
 namespace Domain.ValueObjects
 {
-    public class Email
+    public class Email : ValueObject
     {
         public Email(string email)
         {

@@ -1,20 +1,28 @@
 
+using System;
 using Domain.ValueObjects;
 
 namespace Domain.Entities
 {
-    public class Publishers
+    public class Publishers : User
     {
-        public Publishers(Name name, Email email, Address address, Document document)
-            {
-                Name = name;
-                Email = email;
-                Address = address;
-                Document = document;
-            }
-        public Name Name { get; set; }
-        public Email Email { get; set; }
-        public Address Address { get; set; }
-        public Document Document { get; set; }
+        public Publishers(Name name,
+        Email email,
+        Address address,
+        Document document,
+        DateTime birtDate) : base(
+            name,
+            email,
+            address,
+            document,
+            birtDate)
+        {
+            Name = name;
+            Email = email;
+            Address = address;
+            Document = document;
+        }
+        public string sector { get; set; }
+
     }
 }

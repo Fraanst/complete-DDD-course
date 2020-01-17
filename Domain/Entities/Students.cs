@@ -1,25 +1,35 @@
+using System;
 using System.Collections.Generic;
 using Domain.ValueObjects;
-using Shared.Entities;
 
 namespace Domain.Entities
 {
-    public class Students : Entity
+    public class Students : User
     {
         private IList<Discipline> _discipline;
-        public Students(Name name, Email email, Address address, Document document)
+        public Students(
+            Name name,
+            Email email,
+            Address address,
+            Document document,
+            DateTime birthDate,
+            string school,
+            string classYear) : base(
+            name,
+            email,
+            address,
+            document,
+            birthDate)
         {
             Name = name;
             Email = email;
             Address = address;
             Document = document;
-            _discipline = new List<Discipline>();
+            School = school;
+            ClassYear = classYear;
         }
-        public Name Name { get; set; }
-        public Email Email { get; set; }
-        public Address Address { get; set; }
-        public Document Document { get; set; }
-
-        public IReadOnlyCollection<Discipline> discipline { get; set; }
+        public string School { get; set; }
+        public string ClassYear { get; set; }
+        public IReadOnlyCollection<Discipline> discipline { get; private set; }
     }
 }

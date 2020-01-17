@@ -4,6 +4,10 @@
     <ProjectReference Include="..\Shared\shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.4" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
