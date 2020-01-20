@@ -15,9 +15,9 @@ namespace Domain.Commands
         {
             AddNotifications(new Contract()
             .Requires()
-            .HasMinLen(School, 3, "School", "O Nome da Escola deve conter pelo menos 3 caracteres")
-            .IsNotNullOrEmpty(ClassYear, "ClassYear", "O Número da turma deve ser preenchido")
-//.IsNotNullOrEmpty(Discipline, "Discipline", "Pelo menos uma disciplina deve ser informada")
+            //.HasMinLen(School, 3, "School", "O Nome da Escola deve conter pelo menos 3 caracteres")
+            //.IsNotNullOrEmpty(ClassYear, "ClassYear", "O Número da turma deve ser preenchido")
+            //.IsNotNullOrEmpty(Discipline, "Discipline", "Pelo menos uma disciplina deve ser informada")
             );
         }
     }

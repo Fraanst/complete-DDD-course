@@ -7,6 +7,7 @@ namespace Shared.Entities
         public Entity(){
             Id = Guid.NewGuid();
         }
+        
         public Guid Id { get; set; }
         public DateTime? DeletedAt { get; set; }
         public DateTime? ModifiedAt { get; set; }

@@ -32,5 +32,6 @@ namespace Domain.Entities
 
         public IReadOnlyCollection<string> School { get; private set; }
         public IReadOnlyCollection<string> ClassYear { get; private set; }
+        public IReadOnlyCollection<Discipline> discipline { get; private set; }
     }
 }

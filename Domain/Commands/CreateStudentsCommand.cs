@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Domain.Entities;
 using Flunt.Validations;
 
 namespace Domain.Commands
@@ -7,7 +8,7 @@ namespace Domain.Commands
     {
         public string School { get; set; }
         public string ClassYear { get; set; }
-        public List<string> Discipline { get; set; }
+        public List<Discipline> Discipline { get; set; }
 
         public void ValidateCreateStudent()
         {
@@ -15,7 +16,7 @@ namespace Domain.Commands
                 .Requires()
                 .HasMinLen(School, 3, "School", "O Nome da Escola deve conter pelo menos 3 caracteres")
                 .IsNotNullOrEmpty(ClassYear, "ClassYear", "O Número da turma deve ser preenchido")
-                .IsNotNullOrEmpty(Discipline[0], "Discipline", "Pelo menos uma disciplina deve ser informada")
+                //.IsNotNullOrEmpty(Discipline, "Discipline", "Pelo menos uma disciplina deve ser informada")
             );
         }
     }
